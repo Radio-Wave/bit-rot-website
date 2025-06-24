@@ -1,106 +1,98 @@
-/* reset & basics */
+/* — Reset & Basics — */
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: sans-serif;
-  background: #000;
-  color: #fff;
+  background:#000;
+  color:#fff;
+  font-family:sans-serif;
 }
 
-/* banner */
+/* — Banner Marquee — */
 .banner {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 2.5rem;
-  overflow: hidden;
-  background: #000;
-  border-bottom: 1px solid #444;
-  z-index: 100;
+  top:0; left:0;
+  width:100%; height:2.5rem;
+  overflow:hidden;
+  background:#000;
+  z-index:1000;
 }
-.banner__text {
+.banner__inner {
   display: flex;
+  /* ensures the flex container is wide enough to scroll both spans */
+  width: max-content;
+  animation: marquee 12s linear infinite;
+}
+.banner__inner span {
+  display:block;
+  padding-right:4rem; /* gap between repeats */
   white-space: nowrap;
-  /* remove the padding-left hack now that we’re duplicating */
-  animation: marquee 10s linear infinite;
+  text-transform: uppercase;
+  font-size:0.9rem;
 }
-.banner__text span {
-  padding-right: 4rem;  /* gap between repeats */
-}
-
-/* Move it left by 50% (width of one span + its gap) */
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* layout */
+/* — Page Layout — */
 .page {
   display: flex;
-  align-items: center;    /* <-- new */
-  padding-top: 2.5rem; /* make room for banner */
-  min-height: 100vh;
+  padding-top: 2.5rem;                /* make room for banner */
+  height: calc(100vh - 2.5rem);       /* full viewport minus banner */
+  align-items: center;                /* vertically center logo & nav */
 }
 
-/* side navs */
+/* — Side Nav — */
 .nav {
+  width:10rem;
   position: sticky;
-  top: 2.5rem;
-  width: 10rem;
-  padding: 1rem;
+  top:2.5rem;                         /* stick below banner */
 }
-.nav ul {
-  list-style: none;
-}
-.nav li + li {
-  margin-top: 1.5rem;
-}
+.nav ul { list-style:none; }
+.nav li + li { margin-top:1.5rem; }
 .nav a {
-  color: #fff;
-  text-decoration: none;
+  color:#fff;
+  text-decoration:none;
   text-transform: lowercase;
-  font-size: 1.3rem;
-  line-height: 1.4;
+  font-size:1.3rem;                   /* a bit bigger, per your ask */
+  line-height:1.4;
 }
-.nav--left { text-align: left; }
+.nav--left  { text-align:left; }
 .nav--right {
-  margin-left: auto;
-  text-align: right;
+  margin-left:auto;
+  text-align:right;
 }
 
-/* main content column */
+/* — Main & Logo — */
 .main {
-  flex: 1;
-  padding: 1rem 2rem;
-  text-align: center;
-}
-
-/* logo */
-.logo {
-  margin: 4rem 0;
+  flex:1;
+  padding:1rem 2rem;
+  text-align:center;
 }
 .logo h1 {
-  font-size: 6rem;
-  line-height: 1;
-  letter-spacing: -0.1em;
-  text-transform: uppercase;
-  /* simple fade-out at bottom of text */
+  font-size:6rem;
+  line-height:1;
+  letter-spacing:-0.1em;
   background: linear-gradient(to bottom, #fff 60%, rgba(255,255,255,0) 100%);
-  -webkit-background-clip: text;
+  background-clip: text;             /* standard */
+  -webkit-background-clip: text;     /* WebKit */
   color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-bottom:3rem;
 }
 
-/* sections */
+/* — Sections — */
 section {
-  margin: 6rem 0;
+  margin:6rem 0;
 }
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size:2rem;
   text-transform: uppercase;
+  margin-bottom:1rem;
 }
 section p {
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-  font-size: 1rem;
+  max-width:600px;
+  margin:0 auto;
+  line-height:1.6;
+  font-size:1rem;
 }
