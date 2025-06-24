@@ -13,8 +13,6 @@ body {
   font-family: sans-serif;
 }
 
-
-
 /* — Banner Marquee (continuous!) — */
 .banner {
   background: #000;
@@ -28,24 +26,12 @@ body {
 /* — Page Layout — */
 .hero {
   display: flex;
-<<<<<<< HEAD
   align-items: center;          /* vertical centering */
   justify-content: center;      /* nav + logo + nav centered */
   gap: 3rem;                    /* tighten the spacing */
   padding-top: 2rem;            /* room below marquee */
   flex-wrap: wrap;
 }
-
-
-
-=======
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 2rem;
-  width: 50%;
-  margin: 0 auto;
-}
->>>>>>> f00c232222664585586d2d5082ac912f74111445
 /* — Side Nav (no more sticky) — */
 .nav {
   width: auto; /* shrink-to-fit */
@@ -74,16 +60,9 @@ body {
 .main {
   text-align: center;
 }
-.logo h1 {
-  font-size: 6rem;
-  line-height: 1;
-  letter-spacing: -0.1em;
-  background: linear-gradient(to bottom, #fff 60%, rgba(255, 255, 255, 0) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 2rem;
+
+.logo img {
+  width: 250px; /* fixed size */
 }
 
 /* — Sections — */
