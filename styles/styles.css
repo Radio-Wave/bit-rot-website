@@ -1,34 +1,40 @@
 /* — Reset & Basics — */
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
-  background:#000;
-  color:#fff;
-  font-family:sans-serif;
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
 }
 
 /* — Banner Marquee (continuous!) — */
 .banner {
-  background:#000;
-  color:#fff;
-  font-size:0.9rem;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  padding:0.5rem 0;
-  border-bottom:1px solid #444;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #444;
 }
 
 /* — Page Layout — */
-.page {
+.hero {
   display: flex;
-  align-items: center;          /* vertical centering */
-  justify-content: center;      /* nav + logo + nav centered */
-  gap: 3rem;                    /* tighten the spacing */
-  padding-top: 2rem;            /* room below marquee */
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
+  width: 50%;
+  margin: 0 auto;
 }
-
 /* — Side Nav (no more sticky) — */
 .nav {
-  width: auto;                  /* shrink-to-fit */
+  width: auto; /* shrink-to-fit */
 }
 .nav ul {
   list-style: none;
@@ -40,11 +46,15 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: lowercase;
-  font-size: 1.3rem;            /* bigger per your note */
+  font-size: 1.3rem; /* bigger per your note */
   line-height: 1.4;
 }
-.nav--left  { text-align: left;  }
-.nav--right { text-align: right; }
+.nav--left {
+  text-align: left;
+}
+.nav--right {
+  text-align: right;
+}
 
 /* — Main & Logo — */
 .main {
@@ -54,7 +64,7 @@ body {
   font-size: 6rem;
   line-height: 1;
   letter-spacing: -0.1em;
-  background: linear-gradient(to bottom, #fff 60%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom, #fff 60%, rgba(255, 255, 255, 0) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
