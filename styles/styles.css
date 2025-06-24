@@ -7,92 +7,73 @@ body {
   font-family:sans-serif;
 }
 
-/* — Banner Marquee — */
+/* — Banner Marquee (continuous!) — */
 .banner {
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:2.5rem;
-  overflow:hidden;
   background:#000;
-  z-index:1000;
-}
-.banner__inner {
-  display: flex;
-  /* ensures the flex container is wide enough to scroll both spans */
-  width: max-content;
-  animation: marquee 12s linear infinite;
-}
-.banner__inner span {
-  display:block;
-  padding-right:4rem; /* gap between repeats */
-  white-space: nowrap;
-  text-transform: uppercase;
+  color:#fff;
   font-size:0.9rem;
-}
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  text-transform: uppercase;
+  padding:0.5rem 0;
+  border-bottom:1px solid #444;
 }
 
 /* — Page Layout — */
 .page {
   display: flex;
-  padding-top: 2.5rem;                /* make room for banner */
-  height: calc(100vh - 2.5rem);       /* full viewport minus banner */
-  align-items: center;                /* vertically center logo & nav */
+  align-items: center;          /* vertical centering */
+  justify-content: center;      /* nav + logo + nav centered */
+  gap: 3rem;                    /* tighten the spacing */
+  padding-top: 2rem;            /* room below marquee */
 }
 
-/* — Side Nav — */
+/* — Side Nav (no more sticky) — */
 .nav {
-  width:10rem;
-  position: sticky;
-  top:2.5rem;                         /* stick below banner */
+  width: auto;                  /* shrink-to-fit */
 }
-.nav ul { list-style:none; }
-.nav li + li { margin-top:1.5rem; }
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .nav a {
-  color:#fff;
-  text-decoration:none;
+  color: #fff;
+  text-decoration: none;
   text-transform: lowercase;
-  font-size:1.3rem;                   /* a bit bigger, per your ask */
-  line-height:1.4;
+  font-size: 1.3rem;            /* bigger per your note */
+  line-height: 1.4;
 }
-.nav--left  { text-align:left; }
-.nav--right {
-  margin-left:auto;
-  text-align:right;
-}
+.nav--left  { text-align: left;  }
+.nav--right { text-align: right; }
 
 /* — Main & Logo — */
 .main {
-  flex:1;
-  padding:1rem 2rem;
-  text-align:center;
+  text-align: center;
 }
 .logo h1 {
-  font-size:6rem;
-  line-height:1;
-  letter-spacing:-0.1em;
+  font-size: 6rem;
+  line-height: 1;
+  letter-spacing: -0.1em;
   background: linear-gradient(to bottom, #fff 60%, rgba(255,255,255,0) 100%);
-  background-clip: text;             /* standard */
-  -webkit-background-clip: text;     /* WebKit */
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  margin-bottom:3rem;
+  margin-bottom: 2rem;
 }
 
 /* — Sections — */
 section {
-  margin:6rem 0;
+  margin: 4rem 0;
 }
 section h2 {
-  font-size:2rem;
+  font-size: 2rem;
   text-transform: uppercase;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
 }
 section p {
-  max-width:600px;
-  margin:0 auto;
-  line-height:1.6;
-  font-size:1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1rem;
 }
