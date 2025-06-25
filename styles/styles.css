@@ -22,6 +22,35 @@ body {
   padding: 0.5rem 0;
   border-bottom: 1px solid #444;
 }
+/* — grid container for artist cards — */
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;       /* space below the “ARTISTS” heading */
+}
+
+/* — each bio card — */
+.artist-card {
+  border: 2px solid #fff;     /* solid white border */
+  /* or for a “sketchy” vibe: border: 2px dashed #fff; */
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+/* — artist name — */
+.artist-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+}
+
+/* — bio text — */
+.artist-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
 /* — Page Layout — */
 .hero {
