@@ -30,6 +30,13 @@ body {
   margin-top: 2rem;       /* space below the “ARTISTS” heading */
 }
 
+@media (min-width: 700px) {
+  .artists-grid {
+    /* at 700px+ wide, lock into 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* — each bio card — */
 .artist-card {
   border: 2px solid #fff;     /* solid white border */
