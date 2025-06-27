@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
 /* — Reset & Basics — */
 * {
   margin: 0;
@@ -10,8 +13,12 @@ html {
 body {
   background: #000;
   color: #fff;
-  font-family: sans-serif;
+  /* font-family: 'Inter', sans-serif; */
+    font-family: 'IBM Plex Mono', monospace;
+
 }
+
+
 
 /* — Banner Marquee (continuous!) — */
 .banner {
@@ -42,12 +49,16 @@ body {
 
 /* — each bio card — */
 .artist-card {
-  border: 2px solid #fff;     /* solid white border */
-  /* or for a “sketchy” vibe: border: 2px dashed #fff; */
+  border: 2px solid #fff;
   border-radius: 4px;
   padding: 1.5rem;
   text-align: left;
+  display: flex;
+  flex-direction: column; 
+  height: 100%; /* ensures consistent card height */
+
 }
+
 
 /* — artist name — */
 .artist-card h3 {
@@ -60,6 +71,19 @@ body {
 .artist-card p {
   font-size: 1rem;
   line-height: 1.5;
+
+}
+
+.artist-link {
+  justify-content: space-between; 
+
+  margin-top: auto;
+  padding-top: 1rem; /* consistent spacing */
+
+}
+.artist-link a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* — Page Layout — */
@@ -112,7 +136,7 @@ section h2 {
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  padding: 1em;
+  padding: 0.2em;
 }
 section p {
   max-width: 800px;
@@ -291,4 +315,13 @@ section p {
 .btn-wrapper {
   text-align: center;
   margin-top: 1rem;   /* optional space above */
+}
+
+section p a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+section p a:hover {
+  opacity: 0.7;
 }
