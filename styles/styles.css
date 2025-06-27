@@ -1,7 +1,7 @@
 /* — Reset & Basics — */
 * {
   margin: 0;
-  padding: 0;
+  padding: 0em;
   box-sizing: border-box;
 }
 html {
@@ -27,7 +27,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;       /* space below the “ARTISTS” heading */
+  margin: 2rem;       /* space below the “ARTISTS” heading */
 }
 
 @media (min-width: 700px) {
@@ -35,6 +35,9 @@ body {
     /* at 700px+ wide, lock into 3 equal columns */
     grid-template-columns: repeat(3, 1fr);
   }
+  body{
+    padding: 1em;
+}
 }
 
 /* — each bio card — */
@@ -109,9 +112,10 @@ section h2 {
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
+  padding: 1em;
 }
 section p {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
   font-size: 1rem;
@@ -173,10 +177,10 @@ section p {
 .intro-quote {
   font-family: 'Merriweather', serif;
   font-style: italic;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #ddd;
   margin: 2rem auto;
-  max-width: 800px;
+  max-width: 700px;
   padding-left: 1rem;
   border-left: 4px solid #fff;
 }
@@ -233,12 +237,12 @@ section p {
 
 .landscape-photo {
   text-align: center;     /* center the figure & caption */
-  margin: 2rem 0;         /* vertical spacing */
+  margin: 1rem 0;         /* vertical spacing */
 }
 
 .landscape-photo img {
   display: block;         /* so margin auto works */
-  max-width: 90%;         /* cap at 80% of its container */
+  max-width: 100%;         /* cap at 80% of its container */
   height: auto;           /* preserve aspect ratio */
   margin: 0 auto;         /* center horizontally */
   border-radius: 4px;     /* optional—soften the corners */
