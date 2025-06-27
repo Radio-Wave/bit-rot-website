@@ -165,3 +165,126 @@ section p {
     /* padding: 0 1rem; */
   }
 }
+
+/*  → Pull in a serif italic for the quote */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400&display=swap');
+
+/* — Intro Quote — */
+.intro-quote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #ddd;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding-left: 1rem;
+  border-left: 4px solid #fff;
+}
+.intro-quote footer {
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+.intro-quote cite {
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* — Body Text — */
+.body-text {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #eee;
+}
+.body-text p + p {
+  margin-top: 1.5rem;
+}
+
+/* — Keywords — */
+.keywords {
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  text-align: left;
+}
+.keywords h3 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+.keywords ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+.keywords li {
+  font-size: 0.9rem;
+  color: #ddd;
+  background: rgba(255,255,255,0.05);
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+}
+
+.landscape-photo {
+  text-align: center;     /* center the figure & caption */
+  margin: 2rem 0;         /* vertical spacing */
+}
+
+.landscape-photo img {
+  display: block;         /* so margin auto works */
+  max-width: 90%;         /* cap at 80% of its container */
+  height: auto;           /* preserve aspect ratio */
+  margin: 0 auto;         /* center horizontally */
+  border-radius: 4px;     /* optional—soften the corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5); /* optional subtle shadow */
+}
+
+.landscape-photo figcaption {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* — Map styling — */
+.map-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+.map-wrapper iframe {
+  width: 80%;              /* your requested 80% width */
+  height: 400px;           /* adjust as you like */
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* — “Add to calendar” button — */
+.btn {
+  display: block;
+  padding: 0.8rem 4rem;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+.btn--calendar:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin-top: 1rem;   /* optional space above */
+}

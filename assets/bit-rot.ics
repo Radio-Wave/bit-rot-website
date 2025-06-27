@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Copeland Gallery//Bit Rot Exhibition//EN
+BEGIN:VEVENT
+UID:bit-rot-20250807T170000@copelandgallery.github.io
+DTSTAMP:20250627T120000Z
+DTSTART:20250807T170000
+DTEND:20250807T200000
+SUMMARY:Bit Rot Exhibition Opening
+LOCATION:Copeland Gallery\, 123 Example St\, London
+DESCRIPTION:Private view for Bit Rot group exhibition at Copeland Gallery.
+END:VEVENT
+END:VCALENDAR
