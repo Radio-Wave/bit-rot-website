@@ -14,7 +14,7 @@ body {
   background: #000;
   color: #fff;
   /* font-family: 'Inter', sans-serif; */
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Fira Mono','IBM Plex Mono', monospace;
 
 }
 
@@ -133,6 +133,8 @@ section {
   margin: 4rem 0;
 }
 section h2 {
+    font-family: 'VT323', monospace;
+
   font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
