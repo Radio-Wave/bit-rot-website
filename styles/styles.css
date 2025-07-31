@@ -357,16 +357,29 @@ section p a:hover {
   }
 }
 
-/* — Event card: builds on .artist-card — */
-.event-card {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center content inside */
-  padding: 1.25rem;    /* a touch tighter than the default */
+/* — Events Grid: force 2x2 layout unless phone — */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* always 2 across */
+  gap: 2rem;
+  margin: 2rem;
+}
+@media (max-width: 600px) {
+  .events-grid {
+    grid-template-columns: 1fr;  /* collapse to single column on phones */
+  }
 }
 
-/* Small pill label (Talk / Workshop) */
+/* — Event Card — */
+.event-card {
+  text-align: left; /* consistent left alignment for all content */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* allow content to stretch full width */
+  padding: 1.25rem;
+}
+
+/* — Talk/Workshop Label — */
 .event-label {
   display: inline-block;
   text-transform: uppercase;
@@ -379,11 +392,11 @@ section p a:hover {
   opacity: 0.9;
 }
 
-/* Title + time */
+/* — Title + Time — */
 .event-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.25rem;
-  text-transform: lowercase; /* matches artist cards */
+  text-transform: lowercase;
 }
 .event-time {
   font-style: italic;
@@ -392,29 +405,30 @@ section p a:hover {
   opacity: 0.9;
 }
 
-/* Image in the middle */
-.event-media { margin: 0.5rem 0 1rem; width: 100%; }
+/* — Image — */
+.event-media {
+  margin: 0.5rem 0 1rem;
+  width: 100%;
+}
 .event-media img {
-  display: block;
-  max-width: 80%;
+  width: 100%;                 /* full-width images */
   height: auto;
-  margin: 0 auto;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-
-  /* Optional: square thumbs that crop nicely */
-  aspect-ratio: 1 / 1;
   object-fit: cover;
+  aspect-ratio: 1 / 1;         /* optional: square format */
 }
 
-/* Description + CTA at bottom */
+/* — Description — */
 .event-desc {
   line-height: 1.5;
   color: #eee;
   margin: 0.25rem 0 0.5rem;
 }
+
+/* — CTA Link — */
 .event-card .artist-link {
-  margin-top: auto;       /* push link to the bottom */
+  margin-top: auto;
   padding-top: 1rem;
 }
 .event-card .artist-link a {
