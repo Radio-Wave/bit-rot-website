@@ -330,3 +330,16 @@ section p a {
 section p a:hover {
   opacity: 0.7;
 }
+
+/* — Schedule-only typography — */
+#schedule b,
+#schedule strong,
+#schedule .title {
+  font-weight: 700;   /* bold titles only inside #schedule */
+}
+
+#schedule time,
+#schedule i,
+#schedule em {
+  font-style: italic; /* italic times only inside #schedule */
+}
