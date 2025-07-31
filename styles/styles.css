@@ -343,3 +343,80 @@ section p a:hover {
 #schedule em {
   font-style: italic; /* italic times only inside #schedule */
 }
+
+/* — Events grid: unified talks + workshops — */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem; /* mirrors your artists-grid spacing */
+}
+@media (min-width: 700px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2×2 on desktop */
+  }
+}
+
+/* — Event card: builds on .artist-card — */
+.event-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content inside */
+  padding: 1.25rem;    /* a touch tighter than the default */
+}
+
+/* Small pill label (Talk / Workshop) */
+.event-label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  border: 1px solid #fff;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Title + time */
+.event-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+  text-transform: lowercase; /* matches artist cards */
+}
+.event-time {
+  font-style: italic;
+  display: block;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Image in the middle */
+.event-media { margin: 0.5rem 0 1rem; width: 100%; }
+.event-media img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+
+  /* Optional: square thumbs that crop nicely */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Description + CTA at bottom */
+.event-desc {
+  line-height: 1.5;
+  color: #eee;
+  margin: 0.25rem 0 0.5rem;
+}
+.event-card .artist-link {
+  margin-top: auto;       /* push link to the bottom */
+  padding-top: 1rem;
+}
+.event-card .artist-link a {
+  text-decoration: underline;
+}
